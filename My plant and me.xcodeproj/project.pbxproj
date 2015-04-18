@@ -13,6 +13,8 @@
 		954002D31AE28A6900AB8D69 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954002D21AE28A6900AB8D69 /* Images.xcassets */; };
 		954002D61AE28A6900AB8D69 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954002D41AE28A6900AB8D69 /* LaunchScreen.xib */; };
 		954002E21AE28A6900AB8D69 /* My_plant_and_meTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002E11AE28A6900AB8D69 /* My_plant_and_meTests.swift */; };
+		954002EC1AE28F0600AB8D69 /* plantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002EB1AE28F0600AB8D69 /* plantModel.swift */; };
+		954002EE1AE293BF00AB8D69 /* PlantComunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002ED1AE293BF00AB8D69 /* PlantComunicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		954002DB1AE28A6900AB8D69 /* My plant and meTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My plant and meTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		954002E01AE28A6900AB8D69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		954002E11AE28A6900AB8D69 /* My_plant_and_meTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_plant_and_meTests.swift; sourceTree = "<group>"; };
+		954002EB1AE28F0600AB8D69 /* plantModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = plantModel.swift; sourceTree = "<group>"; };
+		954002ED1AE293BF00AB8D69 /* PlantComunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantComunicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				954002CB1AE28A6900AB8D69 /* AppDelegate.swift */,
 				954002CD1AE28A6900AB8D69 /* ViewController.swift */,
+				954002EB1AE28F0600AB8D69 /* plantModel.swift */,
+				954002ED1AE293BF00AB8D69 /* PlantComunicator.swift */,
 				954002CF1AE28A6900AB8D69 /* Main.storyboard */,
 				954002D21AE28A6900AB8D69 /* Images.xcassets */,
 				954002D41AE28A6900AB8D69 /* LaunchScreen.xib */,
@@ -212,8 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				954002EE1AE293BF00AB8D69 /* PlantComunicator.swift in Sources */,
 				954002CE1AE28A6900AB8D69 /* ViewController.swift in Sources */,
 				954002CC1AE28A6900AB8D69 /* AppDelegate.swift in Sources */,
+				954002EC1AE28F0600AB8D69 /* plantModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
