@@ -10,11 +10,14 @@
 		954002CC1AE28A6900AB8D69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002CB1AE28A6900AB8D69 /* AppDelegate.swift */; };
 		954002CE1AE28A6900AB8D69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002CD1AE28A6900AB8D69 /* ViewController.swift */; };
 		954002D11AE28A6900AB8D69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954002CF1AE28A6900AB8D69 /* Main.storyboard */; };
-		954002D31AE28A6900AB8D69 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954002D21AE28A6900AB8D69 /* Images.xcassets */; };
 		954002D61AE28A6900AB8D69 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954002D41AE28A6900AB8D69 /* LaunchScreen.xib */; };
 		954002E21AE28A6900AB8D69 /* My_plant_and_meTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002E11AE28A6900AB8D69 /* My_plant_and_meTests.swift */; };
 		954002EC1AE28F0600AB8D69 /* plantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002EB1AE28F0600AB8D69 /* plantModel.swift */; };
 		954002EE1AE293BF00AB8D69 /* PlantComunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002ED1AE293BF00AB8D69 /* PlantComunicator.swift */; };
+		954002F01AE2A11000AB8D69 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954002EF1AE2A11000AB8D69 /* Media.xcassets */; };
+		954002F21AE2C24800AB8D69 /* waterUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002F11AE2C24800AB8D69 /* waterUIController.swift */; };
+		954003061AE2EB1000AB8D69 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954002FB1AE2D50A00AB8D69 /* SwiftHTTP.framework */; };
+		9540033A1AE2EE5200AB8D69 /* JSONJoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954003311AE2EE3800AB8D69 /* JSONJoy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +28,76 @@
 			remoteGlobalIDString = 954002C51AE28A6900AB8D69;
 			remoteInfo = "My plant and me";
 		};
+		954002FA1AE2D50A00AB8D69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 954002F31AE2D50900AB8D69 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD901619C8D8B500DD99B6;
+			remoteInfo = SwiftHTTP;
+		};
+		954002FC1AE2D50A00AB8D69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 954002F31AE2D50900AB8D69 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD902119C8D8B500DD99B6;
+			remoteInfo = SwiftHTTPTests;
+		};
+		954002FE1AE2D50A00AB8D69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 954002F31AE2D50900AB8D69 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958025919E6EEEB003C8218;
+			remoteInfo = SwiftHTTPOSX;
+		};
+		954003001AE2D50A00AB8D69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 954002F31AE2D50900AB8D69 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958026319E6EEEB003C8218;
+			remoteInfo = SwiftHTTPOSXTests;
+		};
+		954003041AE2EAA700AB8D69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 954002F31AE2D50900AB8D69 /* SwiftHTTP.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BFD901519C8D8B500DD99B6;
+			remoteInfo = SwiftHTTP;
+		};
+		954003301AE2EE3800AB8D69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 954003291AE2EE3800AB8D69 /* JSONJoy.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6B3E79B719D355CF006071F7;
+			remoteInfo = JSONJoy;
+		};
+		954003321AE2EE3800AB8D69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 954003291AE2EE3800AB8D69 /* JSONJoy.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6B3E79C219D355CF006071F7;
+			remoteInfo = JSONJoyTests;
+		};
+		954003341AE2EE3800AB8D69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 954003291AE2EE3800AB8D69 /* JSONJoy.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958022E19E6ED8E003C8218;
+			remoteInfo = JSONJoyOSX;
+		};
+		954003361AE2EE3800AB8D69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 954003291AE2EE3800AB8D69 /* JSONJoy.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D958023819E6ED8E003C8218;
+			remoteInfo = JSONJoyOSXTests;
+		};
+		954003381AE2EE4D00AB8D69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 954003291AE2EE3800AB8D69 /* JSONJoy.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B3E79B619D355CF006071F7;
+			remoteInfo = JSONJoy;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +106,16 @@
 		954002CB1AE28A6900AB8D69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		954002CD1AE28A6900AB8D69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		954002D01AE28A6900AB8D69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		954002D21AE28A6900AB8D69 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		954002D51AE28A6900AB8D69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		954002DB1AE28A6900AB8D69 /* My plant and meTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My plant and meTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		954002E01AE28A6900AB8D69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		954002E11AE28A6900AB8D69 /* My_plant_and_meTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_plant_and_meTests.swift; sourceTree = "<group>"; };
 		954002EB1AE28F0600AB8D69 /* plantModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = plantModel.swift; sourceTree = "<group>"; };
 		954002ED1AE293BF00AB8D69 /* PlantComunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantComunicator.swift; sourceTree = "<group>"; };
+		954002EF1AE2A11000AB8D69 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		954002F11AE2C24800AB8D69 /* waterUIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = waterUIController.swift; sourceTree = "<group>"; };
+		954002F31AE2D50900AB8D69 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = ../../../../Development/SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
+		954003291AE2EE3800AB8D69 /* JSONJoy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONJoy.xcodeproj; path = "../../../../Development/JSONJoy-Swift/JSONJoy.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +123,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9540033A1AE2EE5200AB8D69 /* JSONJoy.framework in Frameworks */,
+				954003061AE2EB1000AB8D69 /* SwiftHTTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +141,8 @@
 		954002BD1AE28A6800AB8D69 = {
 			isa = PBXGroup;
 			children = (
+				954003291AE2EE3800AB8D69 /* JSONJoy.xcodeproj */,
+				954002F31AE2D50900AB8D69 /* SwiftHTTP.xcodeproj */,
 				954002C81AE28A6900AB8D69 /* My plant and me */,
 				954002DE1AE28A6900AB8D69 /* My plant and meTests */,
 				954002C71AE28A6900AB8D69 /* Products */,
@@ -86,7 +166,8 @@
 				954002EB1AE28F0600AB8D69 /* plantModel.swift */,
 				954002ED1AE293BF00AB8D69 /* PlantComunicator.swift */,
 				954002CF1AE28A6900AB8D69 /* Main.storyboard */,
-				954002D21AE28A6900AB8D69 /* Images.xcassets */,
+				954002F11AE2C24800AB8D69 /* waterUIController.swift */,
+				954002EF1AE2A11000AB8D69 /* Media.xcassets */,
 				954002D41AE28A6900AB8D69 /* LaunchScreen.xib */,
 				954002C91AE28A6900AB8D69 /* Supporting Files */,
 			);
@@ -118,6 +199,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		954002F41AE2D50900AB8D69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				954002FB1AE2D50A00AB8D69 /* SwiftHTTP.framework */,
+				954002FD1AE2D50A00AB8D69 /* SwiftHTTPTests.xctest */,
+				954002FF1AE2D50A00AB8D69 /* SwiftHTTP.framework */,
+				954003011AE2D50A00AB8D69 /* SwiftHTTPOSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9540032A1AE2EE3800AB8D69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				954003311AE2EE3800AB8D69 /* JSONJoy.framework */,
+				954003331AE2EE3800AB8D69 /* JSONJoyTests.xctest */,
+				954003351AE2EE3800AB8D69 /* JSONJoy.framework */,
+				954003371AE2EE3800AB8D69 /* JSONJoyOSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +235,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				954003391AE2EE4D00AB8D69 /* PBXTargetDependency */,
+				954003051AE2EAA700AB8D69 /* PBXTargetDependency */,
 			);
 			name = "My plant and me";
 			productName = "My plant and me";
@@ -185,6 +290,16 @@
 			mainGroup = 954002BD1AE28A6800AB8D69;
 			productRefGroup = 954002C71AE28A6900AB8D69 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9540032A1AE2EE3800AB8D69 /* Products */;
+					ProjectRef = 954003291AE2EE3800AB8D69 /* JSONJoy.xcodeproj */;
+				},
+				{
+					ProductGroup = 954002F41AE2D50900AB8D69 /* Products */;
+					ProjectRef = 954002F31AE2D50900AB8D69 /* SwiftHTTP.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				954002C51AE28A6900AB8D69 /* My plant and me */,
@@ -193,14 +308,73 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		954002FB1AE2D50A00AB8D69 /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = 954002FA1AE2D50A00AB8D69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		954002FD1AE2D50A00AB8D69 /* SwiftHTTPTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPTests.xctest;
+			remoteRef = 954002FC1AE2D50A00AB8D69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		954002FF1AE2D50A00AB8D69 /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = 954002FE1AE2D50A00AB8D69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		954003011AE2D50A00AB8D69 /* SwiftHTTPOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPOSXTests.xctest;
+			remoteRef = 954003001AE2D50A00AB8D69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		954003311AE2EE3800AB8D69 /* JSONJoy.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSONJoy.framework;
+			remoteRef = 954003301AE2EE3800AB8D69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		954003331AE2EE3800AB8D69 /* JSONJoyTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = JSONJoyTests.xctest;
+			remoteRef = 954003321AE2EE3800AB8D69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		954003351AE2EE3800AB8D69 /* JSONJoy.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSONJoy.framework;
+			remoteRef = 954003341AE2EE3800AB8D69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		954003371AE2EE3800AB8D69 /* JSONJoyOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = JSONJoyOSXTests.xctest;
+			remoteRef = 954003361AE2EE3800AB8D69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		954002C41AE28A6900AB8D69 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				954002D11AE28A6900AB8D69 /* Main.storyboard in Resources */,
+				954002F01AE2A11000AB8D69 /* Media.xcassets in Resources */,
 				954002D61AE28A6900AB8D69 /* LaunchScreen.xib in Resources */,
-				954002D31AE28A6900AB8D69 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +396,7 @@
 				954002CE1AE28A6900AB8D69 /* ViewController.swift in Sources */,
 				954002CC1AE28A6900AB8D69 /* AppDelegate.swift in Sources */,
 				954002EC1AE28F0600AB8D69 /* plantModel.swift in Sources */,
+				954002F21AE2C24800AB8D69 /* waterUIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +415,16 @@
 			isa = PBXTargetDependency;
 			target = 954002C51AE28A6900AB8D69 /* My plant and me */;
 			targetProxy = 954002DC1AE28A6900AB8D69 /* PBXContainerItemProxy */;
+		};
+		954003051AE2EAA700AB8D69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftHTTP;
+			targetProxy = 954003041AE2EAA700AB8D69 /* PBXContainerItemProxy */;
+		};
+		954003391AE2EE4D00AB8D69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONJoy;
+			targetProxy = 954003381AE2EE4D00AB8D69 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -266,7 +451,7 @@
 		954002E31AE28A6900AB8D69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -311,7 +496,7 @@
 		954002E41AE28A6900AB8D69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -338,6 +523,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "\"$(SRCROOT)/../../../../Development/SwiftHTTP/SwiftHTTP.h\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;

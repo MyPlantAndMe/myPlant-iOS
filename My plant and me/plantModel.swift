@@ -8,14 +8,25 @@
 
 import Foundation
 
-class PlantManager {
+typealias Minutes = Int;
+
+class PlantModel {
     
-    func waterPlant(quantity: Int) {
-        
+    let communicator: PlantComunicator
+    
+    init(serverURL: String) {
+        communicator = PlantComunicator(url: serverURL)
     }
     
-    func setLights(minutes duration: Int) {
-        
-        
+    func waterPlant(quantity: Int) {
+        communicator.sendData(DataType.humidity, value: quantity)
+    }
+    
+    func setLights(minutes duration: Minutes) {
+        communicator.sendData(DataType.light, value: duration)
+    }
+    
+    func turnOnTemperature(minutes duration: Minutes) {
+        communicator.sendData(DataType.temperature, value: duration)
     }
 }
