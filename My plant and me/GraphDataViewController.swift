@@ -9,23 +9,58 @@
 import UIKit
 
 class GraphDataViewController: UIViewController {
+    
 
     @IBOutlet weak var historyValues: UITextView! {
         didSet {
-            historyValues.text = text
+            historyValues.text = values
         }
     }
     
     @IBOutlet weak var actionButton: UIButton! {
         didSet {
-            actionButton.setTitle(text, forState: UIControlState.Normal)
+            actionButton.setTitle(buttonText, forState: UIControlState.Normal)
         }
     }
-    var text: String = "" {
+    
+    @IBOutlet weak var graph: UIImageView!
+    
+    @IBAction func performAction(sender: UIButton) {
+        if let controller = self.popoverPresentationController {
+            if let vc = controller.delegate as? MainViewController {
+                switch sender.currentTitle! {
+                case "increase temperature":  vc.increaseTemperature(sender)
+                case "water plant": vc.WaterPlant(sender)
+                case "turn on lights":
+                    vc.changeLights(sender)
+                default: break
+                }
+
+            }
+        }
+    }
+    
+    var buttonText: String = "" {
         didSet {
-            historyValues?.text = text
-            actionButton?.setTitle(text, forState: UIControlState.Normal)
+            println("set text in popover " + buttonText)
+            actionButton?.setTitle(buttonText, forState: UIControlState.Normal)
+        }
+    }
+    
+    var values: String = "[]" {
+        didSet {
+            historyValues?.text = values
         }
     }
 
+//    override var preferredContentSize: CGSize {
+//        get {
+//            if graph != nil && presentingViewController != nil {
+//                return graph.sizeThatFits(presentingViewController!.view.bounds.size)
+//            } else {
+//                return super.preferredContentSize
+//            }
+//        }
+//        set { super.preferredContentSize = newValue }
+//    }
 }

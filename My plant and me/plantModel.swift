@@ -26,7 +26,6 @@ class PlantModel {
     }
     
     func waterPlant(quantity: Int) {
-        
         communicator.sendData("water", value: quantity)
     }
     

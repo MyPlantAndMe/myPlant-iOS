@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fPk-U8-JEf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="My_plant_and_me" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="My_plant_and_me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,23 +21,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="slack_for_ios_upload" translatesAutoresizingMaskIntoConstraints="NO" id="bve-Gb-KV6">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9n-Y3-xd9">
-                                <rect key="frame" x="285" y="538" width="32" height="32"/>
-                                <state key="normal" image="thermometer50">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="increaseTemperatre:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZx-g8-hXP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KB-yi-hHx">
                                 <rect key="frame" x="549" y="550" width="35" height="30"/>
                                 <state key="normal" title="Light">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeLights:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6m7-Jf-JJr"/>
-                                    <segue destination="exL-kR-qig" kind="popoverPresentation" popoverAnchorView="9KB-yi-hHx" id="WP9-L0-yUw">
+                                    <segue destination="8HP-rK-N0R" kind="popoverPresentation" identifier="Lights" popoverAnchorView="9KB-yi-hHx" id="51n-EH-zLb">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -46,8 +38,18 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="WaterPlant:" destination="BYZ-38-t0r" eventType="touchUpInside" id="epC-2S-3Bf"/>
-                                    <segue destination="exL-kR-qig" kind="popoverPresentation" popoverAnchorView="Gpe-8T-4jS" id="H6v-ln-AJ4">
+                                    <segue destination="8HP-rK-N0R" kind="popoverPresentation" identifier="Water" popoverAnchorView="Gpe-8T-4jS" id="CgD-Rx-PoV">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubd-Zi-3hH">
+                                <rect key="frame" x="257" y="550" width="86" height="30"/>
+                                <state key="normal" title="Temperature">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8HP-rK-N0R" kind="popoverPresentation" identifier="Temperature" popoverAnchorView="Ubd-Zi-3hH" id="Of5-ol-9zq">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -58,73 +60,336 @@
                             <constraint firstItem="bve-Gb-KV6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4Ej-rh-5UG"/>
                             <constraint firstItem="9KB-yi-hHx" firstAttribute="leading" secondItem="bve-Gb-KV6" secondAttribute="trailing" constant="-51" id="4qQ-kh-v0W"/>
                             <constraint firstItem="bve-Gb-KV6" firstAttribute="leading" secondItem="Gpe-8T-4jS" secondAttribute="trailing" constant="-56" id="8vh-RE-YBJ"/>
-                            <constraint firstItem="bve-Gb-KV6" firstAttribute="centerX" secondItem="n9n-Y3-xd9" secondAttribute="centerX" id="HQx-Bn-Gmm"/>
                             <constraint firstItem="9KB-yi-hHx" firstAttribute="top" secondItem="bve-Gb-KV6" secondAttribute="bottom" constant="-50" id="M80-xn-mIF"/>
-                            <constraint firstItem="bve-Gb-KV6" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="NI4-Xf-Wa1"/>
+                            <constraint firstItem="Ubd-Zi-3hH" firstAttribute="baseline" secondItem="Gpe-8T-4jS" secondAttribute="baseline" id="YEn-wi-BAF"/>
                             <constraint firstAttribute="trailing" secondItem="bve-Gb-KV6" secondAttribute="trailing" id="hxv-wA-5fN"/>
                             <constraint firstItem="9KB-yi-hHx" firstAttribute="leading" secondItem="bve-Gb-KV6" secondAttribute="trailing" constant="-51" id="qKd-tV-zwN"/>
-                            <constraint firstItem="Gpe-8T-4jS" firstAttribute="baseline" secondItem="n9n-Y3-xd9" secondAttribute="baseline" id="tXR-Ll-7Eb"/>
+                            <constraint firstItem="bve-Gb-KV6" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="v68-Jb-feg"/>
                             <constraint firstItem="bve-Gb-KV6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vJK-mp-zaD"/>
                             <constraint firstItem="Gpe-8T-4jS" firstAttribute="top" secondItem="bve-Gb-KV6" secondAttribute="bottom" constant="-50" id="wK1-r7-tfR"/>
                             <constraint firstItem="bve-Gb-KV6" firstAttribute="leading" secondItem="Gpe-8T-4jS" secondAttribute="trailing" constant="-56" id="xWm-Y0-kTN"/>
+                            <constraint firstAttribute="centerX" secondItem="Ubd-Zi-3hH" secondAttribute="centerX" id="z9e-OD-TFF"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="qXi-tE-31e"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1051" y="312"/>
+            <point key="canvasLocation" x="1741" y="206"/>
         </scene>
-        <!--Graph Data View Controller-->
-        <scene sceneID="xaU-75-hO2">
+        <!--Lights-->
+        <scene sceneID="rf6-Oo-aHr">
             <objects>
-                <viewController id="exL-kR-qig" customClass="GraphDataViewController" customModule="My_plant_and_me" customModuleProvider="target" sceneMemberID="viewController">
-                    <visualEffectView key="view" opaque="NO" contentMode="scaleToFill" id="jeM-LK-Gth">
+                <viewController id="OG3-kk-FoT" customClass="MainViewController" customModule="My_plant_and_me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lKw-Ya-Wux"/>
+                        <viewControllerLayoutGuide type="bottom" id="GiD-Le-Frm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BfO-en-BEh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slack_for_ios_upload" translatesAutoresizingMaskIntoConstraints="NO" id="Ka5-fd-Lw4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPX-CZ-lGi">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cPN-TE-Hmu">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzj-lW-l8o">
+                                            <rect key="frame" x="251" y="285" width="98" height="30"/>
+                                            <state key="normal" title="Turn on Lights">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mzj-lW-l8o" firstAttribute="centerY" secondItem="cPN-TE-Hmu" secondAttribute="centerY" id="oFo-oY-BUb"/>
+                                        <constraint firstItem="mzj-lW-l8o" firstAttribute="centerX" secondItem="cPN-TE-Hmu" secondAttribute="centerX" id="pdR-qC-dGQ"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ka5-fd-Lw4" firstAttribute="leading" secondItem="BfO-en-BEh" secondAttribute="leading" id="894-km-zpu"/>
+                            <constraint firstAttribute="bottom" secondItem="Ka5-fd-Lw4" secondAttribute="bottom" id="B19-Vm-ZJ8"/>
+                            <constraint firstItem="TPX-CZ-lGi" firstAttribute="trailing" secondItem="Ka5-fd-Lw4" secondAttribute="trailing" id="Dae-0X-ctY"/>
+                            <constraint firstAttribute="trailing" secondItem="Ka5-fd-Lw4" secondAttribute="trailing" id="JGW-yq-z5a"/>
+                            <constraint firstItem="TPX-CZ-lGi" firstAttribute="leading" secondItem="Ka5-fd-Lw4" secondAttribute="leading" id="Olm-l1-XWb"/>
+                            <constraint firstItem="Ka5-fd-Lw4" firstAttribute="top" secondItem="BfO-en-BEh" secondAttribute="top" id="hw0-Gr-cW3"/>
+                            <constraint firstItem="TPX-CZ-lGi" firstAttribute="bottom" secondItem="Ka5-fd-Lw4" secondAttribute="bottom" id="iiu-TZ-zc8"/>
+                            <constraint firstItem="TPX-CZ-lGi" firstAttribute="top" secondItem="Ka5-fd-Lw4" secondAttribute="top" id="qgK-ku-Rlb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Lights" image="sunny18" id="56R-AR-Vt8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gU9-ug-MZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2131" y="-1681"/>
+        </scene>
+        <!--My plant-->
+        <scene sceneID="fcc-GW-rm0">
+            <objects>
+                <viewController id="fmc-wb-FGJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LW8-hY-o1N"/>
+                        <viewControllerLayoutGuide type="bottom" id="FuD-Rc-nEb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="URw-UH-7kf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slack_for_ios_upload" translatesAutoresizingMaskIntoConstraints="NO" id="Yvz-tb-iyI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yvz-tb-iyI" firstAttribute="top" secondItem="URw-UH-7kf" secondAttribute="top" id="Wpb-et-NuK"/>
+                            <constraint firstAttribute="trailing" secondItem="Yvz-tb-iyI" secondAttribute="trailing" id="cVO-sS-e1W"/>
+                            <constraint firstItem="Yvz-tb-iyI" firstAttribute="leading" secondItem="URw-UH-7kf" secondAttribute="leading" id="cuK-Ns-e2v"/>
+                            <constraint firstAttribute="bottom" secondItem="Yvz-tb-iyI" secondAttribute="bottom" id="xUQ-Gm-1Ur"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My plant" image="leaf3-128" id="Ky3-qD-b6a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z2c-ZD-fYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3043" y="-542"/>
+        </scene>
+        <!--Temperature-->
+        <scene sceneID="LH4-Vu-DiT">
+            <objects>
+                <viewController id="rle-uH-hl6" customClass="MainViewController" customModule="My_plant_and_me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pZY-6l-lg3"/>
+                        <viewControllerLayoutGuide type="bottom" id="hKi-Kn-zIt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Ez-pP-geC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slack_for_ios_upload" translatesAutoresizingMaskIntoConstraints="NO" id="kul-o0-om0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igI-li-jLe">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4Bt-qq-1aY">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjz-HN-jAH">
+                                            <rect key="frame" x="262" y="285" width="77" height="30"/>
+                                            <state key="normal" title="Turn on fan">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="turnFans:" destination="rle-uH-hl6" eventType="touchUpInside" id="Ixs-gn-xLv"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bjz-HN-jAH" firstAttribute="centerX" secondItem="4Bt-qq-1aY" secondAttribute="centerX" id="Tm9-Ak-iCc"/>
+                                        <constraint firstItem="bjz-HN-jAH" firstAttribute="centerY" secondItem="4Bt-qq-1aY" secondAttribute="centerY" id="UHA-2Z-Q4O"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="igI-li-jLe" firstAttribute="trailing" secondItem="kul-o0-om0" secondAttribute="trailing" id="5ej-7V-lcQ"/>
+                            <constraint firstAttribute="bottom" secondItem="kul-o0-om0" secondAttribute="bottom" id="6TS-hU-l5u"/>
+                            <constraint firstItem="igI-li-jLe" firstAttribute="bottom" secondItem="kul-o0-om0" secondAttribute="bottom" id="7U2-di-wOh"/>
+                            <constraint firstItem="kul-o0-om0" firstAttribute="top" secondItem="2Ez-pP-geC" secondAttribute="top" id="C2q-6e-RwD"/>
+                            <constraint firstItem="igI-li-jLe" firstAttribute="leading" secondItem="kul-o0-om0" secondAttribute="leading" id="U9n-6z-eZk"/>
+                            <constraint firstItem="igI-li-jLe" firstAttribute="top" secondItem="kul-o0-om0" secondAttribute="top" id="ey1-C9-1bd"/>
+                            <constraint firstAttribute="trailing" secondItem="kul-o0-om0" secondAttribute="trailing" id="hBi-Nu-ns7"/>
+                            <constraint firstItem="kul-o0-om0" firstAttribute="leading" secondItem="2Ez-pP-geC" secondAttribute="leading" id="wDH-tn-G20"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Temperature" image="thermometer50" id="X2u-H3-99B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TPC-JT-qLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2134" y="-1043"/>
+        </scene>
+        <!--Water-->
+        <scene sceneID="pGO-Hc-iXN">
+            <objects>
+                <viewController id="iBq-0W-D94" customClass="MainViewController" customModule="My_plant_and_me" customModuleProvider="target" sceneMemberID="viewController">
+                    <visualEffectView key="view" opaque="NO" contentMode="scaleToFill" id="wTb-T6-QZD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4Pz-L3-Tx0">
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="IO1-wC-Mvr">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gox-1f-VJt">
-                                    <rect key="frame" x="0.0" y="0.0" width="622" height="600"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                </textView>
-                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aj5-du-uSD">
-                                    <rect key="frame" x="278" y="285" width="44" height="30"/>
-                                    <state key="normal" title="Action">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slack_for_ios_upload" translatesAutoresizingMaskIntoConstraints="NO" id="Vx1-uE-Hhy">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                </imageView>
+                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmf-ct-bnT">
+                                    <rect key="frame" x="-7" y="0.0" width="607" height="600"/>
+                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PjT-TG-Oh9">
+                                        <rect key="frame" x="0.0" y="0.0" width="607" height="600"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humiditygraph" translatesAutoresizingMaskIntoConstraints="NO" id="JkQ-lJ-naS">
+                                                <rect key="frame" x="80" y="48" width="447" height="244"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="JkQ-lJ-naS" secondAttribute="height" multiplier="419:229" id="MaT-dW-LDr"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jt2-hk-3e3">
+                                                <rect key="frame" x="263" y="300" width="80" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Gx3-8u-Fea"/>
+                                                </constraints>
+                                                <state key="normal" title="Water Plant">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="waterPlant:" destination="iBq-0W-D94" eventType="touchUpInside" id="HF0-Gg-cJl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="jt2-hk-3e3" secondAttribute="bottom" constant="270" id="c8z-0Q-IFS"/>
+                                            <constraint firstItem="jt2-hk-3e3" firstAttribute="top" secondItem="JkQ-lJ-naS" secondAttribute="bottom" constant="8" symbolic="YES" id="f9W-nL-W6M"/>
+                                            <constraint firstItem="JkQ-lJ-naS" firstAttribute="top" secondItem="PjT-TG-Oh9" secondAttribute="top" constant="48" id="hJ7-zA-pRL"/>
+                                            <constraint firstItem="jt2-hk-3e3" firstAttribute="centerX" secondItem="PjT-TG-Oh9" secondAttribute="centerX" id="vot-9r-r5m"/>
+                                            <constraint firstItem="jt2-hk-3e3" firstAttribute="centerX" secondItem="JkQ-lJ-naS" secondAttribute="centerX" id="wFs-CE-YSL"/>
+                                            <constraint firstItem="JkQ-lJ-naS" firstAttribute="leading" secondItem="PjT-TG-Oh9" secondAttribute="leading" constant="94" id="zCt-Mg-H0X"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="zCt-Mg-H0X"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <blurEffect style="light"/>
+                                </visualEffectView>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="Gox-1f-VJt" firstAttribute="top" secondItem="4Pz-L3-Tx0" secondAttribute="top" id="0lR-zn-dR9"/>
-                                <constraint firstAttribute="bottom" secondItem="Gox-1f-VJt" secondAttribute="bottom" id="B0S-pp-RZP"/>
-                                <constraint firstAttribute="trailing" secondItem="Gox-1f-VJt" secondAttribute="trailing" constant="-22" id="T5Z-P4-4b6"/>
-                                <constraint firstItem="Gox-1f-VJt" firstAttribute="leading" secondItem="4Pz-L3-Tx0" secondAttribute="leading" id="ZUH-d2-4IH"/>
-                                <constraint firstItem="Gox-1f-VJt" firstAttribute="centerY" secondItem="Aj5-du-uSD" secondAttribute="centerY" id="yaN-2K-qmh"/>
+                                <constraint firstItem="dmf-ct-bnT" firstAttribute="trailing" secondItem="Vx1-uE-Hhy" secondAttribute="trailing" id="00W-mY-jyX"/>
+                                <constraint firstItem="dmf-ct-bnT" firstAttribute="bottom" secondItem="Vx1-uE-Hhy" secondAttribute="bottom" id="8BB-zs-pc1"/>
+                                <constraint firstItem="dmf-ct-bnT" firstAttribute="leading" secondItem="IO1-wC-Mvr" secondAttribute="leading" constant="-7" id="MIk-GL-YNy"/>
+                                <constraint firstAttribute="bottom" secondItem="Vx1-uE-Hhy" secondAttribute="bottom" id="N9d-Ui-kGk"/>
+                                <constraint firstItem="Vx1-uE-Hhy" firstAttribute="leading" secondItem="IO1-wC-Mvr" secondAttribute="leading" id="dc3-Xf-nlq"/>
+                                <constraint firstItem="dmf-ct-bnT" firstAttribute="top" secondItem="Vx1-uE-Hhy" secondAttribute="top" id="ezn-mD-TRO"/>
+                                <constraint firstItem="Vx1-uE-Hhy" firstAttribute="top" secondItem="IO1-wC-Mvr" secondAttribute="top" id="kip-GB-0nh"/>
+                                <constraint firstAttribute="trailing" secondItem="Vx1-uE-Hhy" secondAttribute="trailing" id="wOI-ac-g9Z"/>
                             </constraints>
                         </view>
-                        <blurEffect style="dark"/>
+                        <blurEffect style="light"/>
                     </visualEffectView>
+                    <tabBarItem key="tabBarItem" title="Water" image="raindrop2" id="B9g-pr-fsi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmU-te-i5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2131" y="-384"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9FO-G8-RaU">
+            <objects>
+                <tabBarController id="fPk-U8-JEf" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="GUs-tG-fRb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
                     <connections>
-                        <outlet property="actionButton" destination="Aj5-du-uSD" id="myb-01-RDd"/>
-                        <outlet property="historyValues" destination="Gox-1f-VJt" id="g78-xt-rVe"/>
+                        <segue destination="fmc-wb-FGJ" kind="relationship" relationship="viewControllers" id="In6-2W-Xpc"/>
+                        <segue destination="iBq-0W-D94" kind="relationship" relationship="viewControllers" id="Kg8-uF-VKs"/>
+                        <segue destination="rle-uH-hl6" kind="relationship" relationship="viewControllers" id="pD6-n8-3yD"/>
+                        <segue destination="OG3-kk-FoT" kind="relationship" relationship="viewControllers" id="XAJ-uM-jDh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xla-ed-ES1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1360" y="-707"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="CO2-sC-aJH">
+            <objects>
+                <viewController id="8HP-rK-N0R" customClass="GraphDataViewController" customModule="My_plant_and_me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ulx-tb-VH0"/>
+                        <viewControllerLayoutGuide type="bottom" id="jl9-Us-bic"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tso-6t-4v7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="[]" translatesAutoresizingMaskIntoConstraints="NO" id="Lgh-68-dUf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kJ-ws-Cxb">
+                                <rect key="frame" x="278" y="285" width="44" height="30"/>
+                                <state key="normal" title="Action">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="performAction:" destination="8HP-rK-N0R" eventType="touchUpInside" id="l1k-ol-s2c"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humiditygraph" translatesAutoresizingMaskIntoConstraints="NO" id="Mxj-t4-a8o">
+                                <rect key="frame" x="16" y="28" width="568" height="249"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="2kJ-ws-Cxb" secondAttribute="centerX" id="1tn-C5-hQX"/>
+                            <constraint firstItem="2kJ-ws-Cxb" firstAttribute="top" secondItem="Mxj-t4-a8o" secondAttribute="bottom" constant="8" symbolic="YES" id="9lZ-4F-xZH"/>
+                            <constraint firstAttribute="centerY" secondItem="Lgh-68-dUf" secondAttribute="centerY" id="Hy3-LO-g4y"/>
+                            <constraint firstItem="Lgh-68-dUf" firstAttribute="leading" secondItem="Mxj-t4-a8o" secondAttribute="trailing" constant="-584" id="N1F-Uh-PCu"/>
+                            <constraint firstItem="Lgh-68-dUf" firstAttribute="top" secondItem="Tso-6t-4v7" secondAttribute="top" id="RP3-sG-Uz7"/>
+                            <constraint firstItem="Mxj-t4-a8o" firstAttribute="centerX" secondItem="2kJ-ws-Cxb" secondAttribute="centerX" id="RQc-rN-Kd5"/>
+                            <constraint firstItem="Mxj-t4-a8o" firstAttribute="leading" secondItem="Tso-6t-4v7" secondAttribute="leadingMargin" id="TSa-fp-kUN"/>
+                            <constraint firstItem="2kJ-ws-Cxb" firstAttribute="leading" secondItem="Tso-6t-4v7" secondAttribute="leading" constant="277" id="WKZ-mA-i0K"/>
+                            <constraint firstAttribute="trailing" secondItem="Lgh-68-dUf" secondAttribute="trailing" id="dZy-mf-uoD"/>
+                            <constraint firstAttribute="centerX" secondItem="Lgh-68-dUf" secondAttribute="centerX" id="guc-vn-Srk"/>
+                            <constraint firstItem="Lgh-68-dUf" firstAttribute="bottom" secondItem="jl9-Us-bic" secondAttribute="top" id="isf-RD-OFM"/>
+                            <constraint firstItem="2kJ-ws-Cxb" firstAttribute="centerY" secondItem="Lgh-68-dUf" secondAttribute="centerY" id="ssD-M0-sRc"/>
+                            <constraint firstAttribute="centerY" secondItem="2kJ-ws-Cxb" secondAttribute="centerY" id="t87-iJ-WOK"/>
+                            <constraint firstItem="Lgh-68-dUf" firstAttribute="leading" secondItem="Tso-6t-4v7" secondAttribute="leading" id="uIf-nT-ckj"/>
+                            <constraint firstItem="Mxj-t4-a8o" firstAttribute="top" secondItem="Ulx-tb-VH0" secondAttribute="bottom" constant="8" symbolic="YES" id="wVx-tE-ewC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WKZ-mA-i0K"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="R3K-om-pp2"/>
+                    <connections>
+                        <outlet property="actionButton" destination="2kJ-ws-Cxb" id="6d0-Ev-iFB"/>
+                        <outlet property="graph" destination="Mxj-t4-a8o" id="udS-lf-UT0"/>
+                        <outlet property="historyValues" destination="Lgh-68-dUf" id="8DQ-vu-A7b"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2fV-Ou-OsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bd7-vM-oQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1854" y="367"/>
+            <point key="canvasLocation" x="2613" y="320"/>
         </scene>
     </scenes>
     <resources>
+        <image name="humiditygraph" width="2656" height="1306"/>
+        <image name="leaf3-128" width="32" height="26"/>
+        <image name="raindrop2" width="32" height="32"/>
         <image name="slack_for_ios_upload" width="1958" height="2611"/>
+        <image name="sunny18" width="32" height="32"/>
         <image name="thermometer50" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WP9-L0-yUw"/>
+        <segue reference="Of5-ol-9zq"/>
     </inferredMetricsTieBreakers>
 </document>

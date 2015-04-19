@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		954002CC1AE28A6900AB8D69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002CB1AE28A6900AB8D69 /* AppDelegate.swift */; };
-		954002CE1AE28A6900AB8D69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002CD1AE28A6900AB8D69 /* ViewController.swift */; };
+		954002CE1AE28A6900AB8D69 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002CD1AE28A6900AB8D69 /* MainViewController.swift */; };
 		954002D11AE28A6900AB8D69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954002CF1AE28A6900AB8D69 /* Main.storyboard */; };
 		954002D61AE28A6900AB8D69 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954002D41AE28A6900AB8D69 /* LaunchScreen.xib */; };
 		954002E21AE28A6900AB8D69 /* My_plant_and_meTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002E11AE28A6900AB8D69 /* My_plant_and_meTests.swift */; };
 		954002EC1AE28F0600AB8D69 /* plantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002EB1AE28F0600AB8D69 /* plantModel.swift */; };
 		954002EE1AE293BF00AB8D69 /* PlantComunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002ED1AE293BF00AB8D69 /* PlantComunicator.swift */; };
 		954002F01AE2A11000AB8D69 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954002EF1AE2A11000AB8D69 /* Media.xcassets */; };
-		954002F21AE2C24800AB8D69 /* waterUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002F11AE2C24800AB8D69 /* waterUIController.swift */; };
 		954003061AE2EB1000AB8D69 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954002FB1AE2D50A00AB8D69 /* SwiftHTTP.framework */; };
 		9540033A1AE2EE5200AB8D69 /* JSONJoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954003311AE2EE3800AB8D69 /* JSONJoy.framework */; };
 		9540081B1AE3438500AB8D69 /* GraphDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9540081A1AE3438500AB8D69 /* GraphDataViewController.swift */; };
@@ -105,7 +104,7 @@
 		954002C61AE28A6900AB8D69 /* My plant and me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My plant and me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		954002CA1AE28A6900AB8D69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		954002CB1AE28A6900AB8D69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		954002CD1AE28A6900AB8D69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		954002CD1AE28A6900AB8D69 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		954002D01AE28A6900AB8D69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		954002D51AE28A6900AB8D69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		954002DB1AE28A6900AB8D69 /* My plant and meTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My plant and meTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +113,6 @@
 		954002EB1AE28F0600AB8D69 /* plantModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = plantModel.swift; sourceTree = "<group>"; };
 		954002ED1AE293BF00AB8D69 /* PlantComunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantComunicator.swift; sourceTree = "<group>"; };
 		954002EF1AE2A11000AB8D69 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		954002F11AE2C24800AB8D69 /* waterUIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = waterUIController.swift; sourceTree = "<group>"; };
 		954002F31AE2D50900AB8D69 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = ../../../../Development/SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
 		954003291AE2EE3800AB8D69 /* JSONJoy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONJoy.xcodeproj; path = "../../../../Development/JSONJoy-Swift/JSONJoy.xcodeproj"; sourceTree = "<group>"; };
 		9540081A1AE3438500AB8D69 /* GraphDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphDataViewController.swift; sourceTree = "<group>"; };
@@ -163,15 +161,9 @@
 		954002C81AE28A6900AB8D69 /* My plant and me */ = {
 			isa = PBXGroup;
 			children = (
-				954002CB1AE28A6900AB8D69 /* AppDelegate.swift */,
-				954002CD1AE28A6900AB8D69 /* ViewController.swift */,
-				954002EB1AE28F0600AB8D69 /* plantModel.swift */,
-				954002ED1AE293BF00AB8D69 /* PlantComunicator.swift */,
+				9540081D1AE3AC0000AB8D69 /* viewControllers */,
+				9540081C1AE3ABD400AB8D69 /* model */,
 				954002CF1AE28A6900AB8D69 /* Main.storyboard */,
-				9540081A1AE3438500AB8D69 /* GraphDataViewController.swift */,
-				954002F11AE2C24800AB8D69 /* waterUIController.swift */,
-				954002EF1AE2A11000AB8D69 /* Media.xcassets */,
-				954002D41AE28A6900AB8D69 /* LaunchScreen.xib */,
 				954002C91AE28A6900AB8D69 /* Supporting Files */,
 			);
 			path = "My plant and me";
@@ -180,6 +172,9 @@
 		954002C91AE28A6900AB8D69 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				954002EF1AE2A11000AB8D69 /* Media.xcassets */,
+				954002D41AE28A6900AB8D69 /* LaunchScreen.xib */,
+				954002CB1AE28A6900AB8D69 /* AppDelegate.swift */,
 				954002CA1AE28A6900AB8D69 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -222,6 +217,24 @@
 				954003371AE2EE3800AB8D69 /* JSONJoyOSXTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9540081C1AE3ABD400AB8D69 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				954002EB1AE28F0600AB8D69 /* plantModel.swift */,
+				954002ED1AE293BF00AB8D69 /* PlantComunicator.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		9540081D1AE3AC0000AB8D69 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9540081A1AE3438500AB8D69 /* GraphDataViewController.swift */,
+				954002CD1AE28A6900AB8D69 /* MainViewController.swift */,
+			);
+			name = viewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,10 +410,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				954002EE1AE293BF00AB8D69 /* PlantComunicator.swift in Sources */,
-				954002CE1AE28A6900AB8D69 /* ViewController.swift in Sources */,
+				954002CE1AE28A6900AB8D69 /* MainViewController.swift in Sources */,
 				954002CC1AE28A6900AB8D69 /* AppDelegate.swift in Sources */,
 				954002EC1AE28F0600AB8D69 /* plantModel.swift in Sources */,
-				954002F21AE2C24800AB8D69 /* waterUIController.swift in Sources */,
 				9540081B1AE3438500AB8D69 /* GraphDataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
