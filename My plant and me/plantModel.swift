@@ -8,25 +8,33 @@
 
 import Foundation
 
-typealias Minutes = Int;
+typealias Date = Int;
 
 class PlantModel {
     
+    
     let communicator: PlantComunicator
+    let humidityHistory: [Date: Int]
+    let lightHistory: [Date: Int]
+    let temperatureHistory: [Date: Int]
     
     init(serverURL: String) {
         communicator = PlantComunicator(url: serverURL)
+        humidityHistory = historyAsDict(communicator.recieveDataHistory("/humidity"))
+        lightHistory = historyAsDict(communicator.recieveDataHistory("/luminosity"))
+        temperatureHistory = historyAsDict(communicator.recieveDataHistory("/temp"))
     }
     
     func waterPlant(quantity: Int) {
-        communicator.sendData(DataType.humidity, value: quantity)
+        
+        communicator.sendData("water", value: quantity)
     }
     
-    func setLights(minutes duration: Minutes) {
-        communicator.sendData(DataType.light, value: duration)
+    func setLights(minutes duration: Int) {
+        communicator.sendData("lights", value: duration)
     }
     
-    func turnOnTemperature(minutes duration: Minutes) {
-        communicator.sendData(DataType.temperature, value: duration)
+    func turnOnFan(minutes duration: Int) {
+        communicator.sendData("fan", value: duration)
     }
 }

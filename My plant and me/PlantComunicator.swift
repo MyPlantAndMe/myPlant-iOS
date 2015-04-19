@@ -9,7 +9,6 @@ import Foundation
 import SwiftHTTP
 import JSONJoy
 
-typealias Date = NSDate
 
 enum DataType: Printable{
     case light
@@ -41,11 +40,36 @@ struct PlantJson: JSONJoy {
 }
 
 struct PlantData: JSONJoy {
-    var date:String?;
+    var date:Int?;
     var value:Int?;
     init(_ decoder: JSONDecoder) {
-        date = decoder["date"].string
+        date = decoder["date"].integer
         value = decoder["value"].integer
+    }
+}
+
+struct DataHistory: JSONJoy {
+    var history: [PlantData?] = [PlantData?]()
+    init(_ decoder: JSONDecoder) {
+        if let datas = decoder["history"].array {
+            for dataDecoder in datas {
+                history.append(PlantData(dataDecoder))
+            }
+        }
+    }
+}
+
+func historyAsDict(history: DataHistory?) -> [Date: Int] {
+    if history != nil {
+        var dict = [Date: Int]()
+        for data in history!.history {
+            if data != nil{
+                dict.updateValue(data!.value!, forKey: data!.date!)
+            }
+        }
+        return dict
+    } else {
+        return [Date: Int]()
     }
 }
 
@@ -57,33 +81,32 @@ class PlantComunicator {
         self.url = url
     }
     
-    func recieveData() -> PlantData? {
+    func recieveDataHistory(path: String) -> DataHistory? {
         var request = HTTPTask()
-        var res: PlantData?
-        request.GET(url, parameters: nil, success: {(response: HTTPResponse) in
-            if let data = response.responseObject as? NSData {
-                let str = NSString(data: data, encoding: NSUTF8StringEncoding)
-                println("response: \(str)") //prints the HTML of the page
-                res = PlantData(JSONDecoder(str!))
-            } else {
-                res = nil
+        var history: DataHistory? = nil
+        request.responseSerializer = JSONResponseSerializer()
+        request.GET(url + path, parameters: nil, success: {(response: HTTPResponse) in
+            if let result: AnyObject = response.responseObject{
+                history = DataHistory(JSONDecoder(result))
             }
+            println("succesfully connected to server")
         },failure: {(error: NSError, response: HTTPResponse?) in
             println("error: \(error)")
-            res =  nil
         })
-        return res
+        return history
     }
     
-    func sendData(type: DataType, value: Int) {
+    func sendData(type: String, value: Int) {
         var request = HTTPTask()
-        let params: [String: Int] = [type.description: value]
-        request.POST(url, parameters: params
+        request.requestSerializer = HTTPRequestSerializer()
+        request.requestSerializer.headers["Content-Type"] = "application/x-www-form-urlencoded"
+        let params: [String: Int] = ["duration": value]
+        request.POST(url+"/actions/"+type, parameters: params
         , success: {(response: HTTPResponse) in
-            println("post succeeded with values \(params)")
+            println("post succeeded with values \(params) and response \(response)")
         },failure: {(error: NSError, response: HTTPResponse?) in
-            println("post failed with values \(params)")
+            let r = response?.description ?? "no response"
+            println("post failed with values \(params) and \(r)")
         })
-        
     }
 }

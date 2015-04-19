@@ -18,6 +18,7 @@
 		954002F21AE2C24800AB8D69 /* waterUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954002F11AE2C24800AB8D69 /* waterUIController.swift */; };
 		954003061AE2EB1000AB8D69 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954002FB1AE2D50A00AB8D69 /* SwiftHTTP.framework */; };
 		9540033A1AE2EE5200AB8D69 /* JSONJoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 954003311AE2EE3800AB8D69 /* JSONJoy.framework */; };
+		9540081B1AE3438500AB8D69 /* GraphDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9540081A1AE3438500AB8D69 /* GraphDataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		954002F11AE2C24800AB8D69 /* waterUIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = waterUIController.swift; sourceTree = "<group>"; };
 		954002F31AE2D50900AB8D69 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = ../../../../Development/SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
 		954003291AE2EE3800AB8D69 /* JSONJoy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONJoy.xcodeproj; path = "../../../../Development/JSONJoy-Swift/JSONJoy.xcodeproj"; sourceTree = "<group>"; };
+		9540081A1AE3438500AB8D69 /* GraphDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				954002EB1AE28F0600AB8D69 /* plantModel.swift */,
 				954002ED1AE293BF00AB8D69 /* PlantComunicator.swift */,
 				954002CF1AE28A6900AB8D69 /* Main.storyboard */,
+				9540081A1AE3438500AB8D69 /* GraphDataViewController.swift */,
 				954002F11AE2C24800AB8D69 /* waterUIController.swift */,
 				954002EF1AE2A11000AB8D69 /* Media.xcassets */,
 				954002D41AE28A6900AB8D69 /* LaunchScreen.xib */,
@@ -286,6 +289,7 @@
 			knownRegions = (
 				en,
 				Base,
+				English,
 			);
 			mainGroup = 954002BD1AE28A6800AB8D69;
 			productRefGroup = 954002C71AE28A6900AB8D69 /* Products */;
@@ -397,6 +401,7 @@
 				954002CC1AE28A6900AB8D69 /* AppDelegate.swift in Sources */,
 				954002EC1AE28F0600AB8D69 /* plantModel.swift in Sources */,
 				954002F21AE2C24800AB8D69 /* waterUIController.swift in Sources */,
+				9540081B1AE3438500AB8D69 /* GraphDataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,8 +541,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/zephyz/Development/CorePlot_1.4/Binaries/MacOS,
+				);
 				INFOPLIST_FILE = "My plant and me/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/zephyz/Development/CorePlot_1.4/Binaries/iOS,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -546,8 +559,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/zephyz/Development/CorePlot_1.4/Binaries/MacOS,
+				);
 				INFOPLIST_FILE = "My plant and me/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/zephyz/Development/CorePlot_1.4/Binaries/iOS,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="My_plant_and_me" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,9 +19,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="slack_for_ios_upload" translatesAutoresizingMaskIntoConstraints="NO" id="bve-Gb-KV6">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9n-Y3-xd9">
-                                <rect key="frame" x="281" y="550" width="38" height="30"/>
-                                <state key="normal" title="Temp">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9n-Y3-xd9">
+                                <rect key="frame" x="285" y="538" width="32" height="32"/>
+                                <state key="normal" image="thermometer50">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -35,6 +35,9 @@
                                 </state>
                                 <connections>
                                     <action selector="changeLights:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6m7-Jf-JJr"/>
+                                    <segue destination="exL-kR-qig" kind="popoverPresentation" popoverAnchorView="9KB-yi-hHx" id="WP9-L0-yUw">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpe-8T-4jS">
@@ -44,6 +47,9 @@
                                 </state>
                                 <connections>
                                     <action selector="WaterPlant:" destination="BYZ-38-t0r" eventType="touchUpInside" id="epC-2S-3Bf"/>
+                                    <segue destination="exL-kR-qig" kind="popoverPresentation" popoverAnchorView="Gpe-8T-4jS" id="H6v-ln-AJ4">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,49 +69,62 @@
                             <constraint firstItem="bve-Gb-KV6" firstAttribute="leading" secondItem="Gpe-8T-4jS" secondAttribute="trailing" constant="-56" id="xWm-Y0-kTN"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="qXi-tE-31e"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1051" y="312"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="mXd-vg-xrB">
+        <!--Graph Data View Controller-->
+        <scene sceneID="xaU-75-hO2">
             <objects>
-                <viewController id="ixT-Rw-ZBK" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ZF7-nv-Uey"/>
-                        <viewControllerLayoutGuide type="bottom" id="fz4-nU-K9o"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bV8-8E-csS">
+                <viewController id="exL-kR-qig" customClass="GraphDataViewController" customModule="My_plant_and_me" customModuleProvider="target" sceneMemberID="viewController">
+                    <visualEffectView key="view" opaque="NO" contentMode="scaleToFill" id="jeM-LK-Gth">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Ehz-Hx-Z61"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0LD-Fb-jtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1698" y="250"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Crg-Vg-xGT">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uib-im-yZn" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gym-jU-S3z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4Pz-L3-Tx0">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gox-1f-VJt">
+                                    <rect key="frame" x="0.0" y="0.0" width="622" height="600"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aj5-du-uSD">
+                                    <rect key="frame" x="278" y="285" width="44" height="30"/>
+                                    <state key="normal" title="Action">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Gox-1f-VJt" firstAttribute="top" secondItem="4Pz-L3-Tx0" secondAttribute="top" id="0lR-zn-dR9"/>
+                                <constraint firstAttribute="bottom" secondItem="Gox-1f-VJt" secondAttribute="bottom" id="B0S-pp-RZP"/>
+                                <constraint firstAttribute="trailing" secondItem="Gox-1f-VJt" secondAttribute="trailing" constant="-22" id="T5Z-P4-4b6"/>
+                                <constraint firstItem="Gox-1f-VJt" firstAttribute="leading" secondItem="4Pz-L3-Tx0" secondAttribute="leading" id="ZUH-d2-4IH"/>
+                                <constraint firstItem="Gox-1f-VJt" firstAttribute="centerY" secondItem="Aj5-du-uSD" secondAttribute="centerY" id="yaN-2K-qmh"/>
+                            </constraints>
+                        </view>
+                        <blurEffect style="dark"/>
+                    </visualEffectView>
                     <connections>
-                        <segue destination="ixT-Rw-ZBK" kind="relationship" relationship="rootViewController" id="cQg-vH-M87"/>
+                        <outlet property="actionButton" destination="Aj5-du-uSD" id="myb-01-RDd"/>
+                        <outlet property="historyValues" destination="Gox-1f-VJt" id="g78-xt-rVe"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fl5-iK-5sJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2fV-Ou-OsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886" y="250"/>
+            <point key="canvasLocation" x="1854" y="367"/>
         </scene>
     </scenes>
     <resources>
         <image name="slack_for_ios_upload" width="1958" height="2611"/>
+        <image name="thermometer50" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="WP9-L0-yUw"/>
+    </inferredMetricsTieBreakers>
 </document>
