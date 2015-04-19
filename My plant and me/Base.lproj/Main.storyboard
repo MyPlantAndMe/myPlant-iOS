@@ -103,6 +103,9 @@
                                             <state key="normal" title="Turn on Lights">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="turnMeOn:" destination="OG3-kk-FoT" eventType="touchUpInside" id="HZ4-Gf-mtk"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>

@@ -12,7 +12,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
     let model = PlantModel(serverURL: "http://46.101.171.226:3000");
     let defaultWaterQuantity = 10;
-    let defaultLightExposureTime: Int = 60;
+    let defaultLightExposureTime: Int = 3;
     let defaultTemperatureExposureTime: Int = 10;
     
     func WaterPlant(sender: UIButton) {
@@ -30,7 +30,6 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @IBAction func turnMeOn(sender: UIButton) {
         changeLights(sender)
     }
-
     @IBAction func turnFans(sender: UIButton) {
         increaseTemperature(sender)
     }
