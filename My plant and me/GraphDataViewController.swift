@@ -51,16 +51,17 @@ class GraphDataViewController: UIViewController {
         didSet {
             historyValues?.text = values
         }
+        
     }
 
-//    override var preferredContentSize: CGSize {
-//        get {
-//            if graph != nil && presentingViewController != nil {
-//                return graph.sizeThatFits(presentingViewController!.view.bounds.size)
-//            } else {
-//                return super.preferredContentSize
-//            }
-//        }
-//        set { super.preferredContentSize = newValue }
-//    }
+    override var preferredContentSize: CGSize {
+        get {
+            if graph != nil && presentingViewController != nil {
+                return graph.sizeThatFits(presentingViewController!.view.bounds.size)
+            } else {
+                return super.preferredContentSize
+            }
+        }
+        set { super.preferredContentSize = newValue }
+    }
 }

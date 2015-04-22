@@ -2,81 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fPk-U8-JEf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="My_plant_and_me" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="slack_for_ios_upload" translatesAutoresizingMaskIntoConstraints="NO" id="bve-Gb-KV6">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KB-yi-hHx">
-                                <rect key="frame" x="549" y="550" width="35" height="30"/>
-                                <state key="normal" title="Light">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8HP-rK-N0R" kind="popoverPresentation" identifier="Lights" popoverAnchorView="9KB-yi-hHx" id="51n-EH-zLb">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpe-8T-4jS">
-                                <rect key="frame" x="16" y="550" width="40" height="30"/>
-                                <state key="normal" title="Water">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8HP-rK-N0R" kind="popoverPresentation" identifier="Water" popoverAnchorView="Gpe-8T-4jS" id="CgD-Rx-PoV">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubd-Zi-3hH">
-                                <rect key="frame" x="257" y="550" width="86" height="30"/>
-                                <state key="normal" title="Temperature">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8HP-rK-N0R" kind="popoverPresentation" identifier="Temperature" popoverAnchorView="Ubd-Zi-3hH" id="Of5-ol-9zq">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="bve-Gb-KV6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4Ej-rh-5UG"/>
-                            <constraint firstItem="9KB-yi-hHx" firstAttribute="leading" secondItem="bve-Gb-KV6" secondAttribute="trailing" constant="-51" id="4qQ-kh-v0W"/>
-                            <constraint firstItem="bve-Gb-KV6" firstAttribute="leading" secondItem="Gpe-8T-4jS" secondAttribute="trailing" constant="-56" id="8vh-RE-YBJ"/>
-                            <constraint firstItem="9KB-yi-hHx" firstAttribute="top" secondItem="bve-Gb-KV6" secondAttribute="bottom" constant="-50" id="M80-xn-mIF"/>
-                            <constraint firstItem="Ubd-Zi-3hH" firstAttribute="baseline" secondItem="Gpe-8T-4jS" secondAttribute="baseline" id="YEn-wi-BAF"/>
-                            <constraint firstAttribute="trailing" secondItem="bve-Gb-KV6" secondAttribute="trailing" id="hxv-wA-5fN"/>
-                            <constraint firstItem="9KB-yi-hHx" firstAttribute="leading" secondItem="bve-Gb-KV6" secondAttribute="trailing" constant="-51" id="qKd-tV-zwN"/>
-                            <constraint firstItem="bve-Gb-KV6" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="v68-Jb-feg"/>
-                            <constraint firstItem="bve-Gb-KV6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vJK-mp-zaD"/>
-                            <constraint firstItem="Gpe-8T-4jS" firstAttribute="top" secondItem="bve-Gb-KV6" secondAttribute="bottom" constant="-50" id="wK1-r7-tfR"/>
-                            <constraint firstItem="bve-Gb-KV6" firstAttribute="leading" secondItem="Gpe-8T-4jS" secondAttribute="trailing" constant="-56" id="xWm-Y0-kTN"/>
-                            <constraint firstAttribute="centerX" secondItem="Ubd-Zi-3hH" secondAttribute="centerX" id="z9e-OD-TFF"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="qXi-tE-31e"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1741" y="206"/>
-        </scene>
         <!--Lights-->
         <scene sceneID="rf6-Oo-aHr">
             <objects>
@@ -241,12 +168,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="607" height="600"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humiditygraph" translatesAutoresizingMaskIntoConstraints="NO" id="JkQ-lJ-naS">
-                                                <rect key="frame" x="80" y="48" width="447" height="244"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="JkQ-lJ-naS" secondAttribute="height" multiplier="419:229" id="MaT-dW-LDr"/>
-                                                </constraints>
-                                            </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jt2-hk-3e3">
                                                 <rect key="frame" x="263" y="300" width="80" height="30"/>
                                                 <constraints>
@@ -259,13 +180,19 @@
                                                     <action selector="waterPlant:" destination="iBq-0W-D94" eventType="touchUpInside" id="HF0-Gg-cJl"/>
                                                 </connections>
                                             </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humiditygraph" translatesAutoresizingMaskIntoConstraints="NO" id="JkQ-lJ-naS">
+                                                <rect key="frame" x="113" y="91" width="381" height="201"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="381" id="MNo-qP-nk8"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="jt2-hk-3e3" firstAttribute="top" secondItem="JkQ-lJ-naS" secondAttribute="bottom" constant="8" symbolic="YES" id="Kby-AT-z4h"/>
                                             <constraint firstAttribute="bottom" secondItem="jt2-hk-3e3" secondAttribute="bottom" constant="270" id="c8z-0Q-IFS"/>
-                                            <constraint firstItem="jt2-hk-3e3" firstAttribute="top" secondItem="JkQ-lJ-naS" secondAttribute="bottom" constant="8" symbolic="YES" id="f9W-nL-W6M"/>
-                                            <constraint firstItem="JkQ-lJ-naS" firstAttribute="top" secondItem="PjT-TG-Oh9" secondAttribute="top" constant="48" id="hJ7-zA-pRL"/>
+                                            <constraint firstItem="JkQ-lJ-naS" firstAttribute="top" secondItem="PjT-TG-Oh9" secondAttribute="top" constant="91" id="rIL-9Z-7We"/>
                                             <constraint firstItem="jt2-hk-3e3" firstAttribute="centerX" secondItem="PjT-TG-Oh9" secondAttribute="centerX" id="vot-9r-r5m"/>
-                                            <constraint firstItem="jt2-hk-3e3" firstAttribute="centerX" secondItem="JkQ-lJ-naS" secondAttribute="centerX" id="wFs-CE-YSL"/>
+                                            <constraint firstItem="JkQ-lJ-naS" firstAttribute="centerX" secondItem="jt2-hk-3e3" secondAttribute="centerX" id="xdI-qI-asU"/>
                                             <constraint firstItem="JkQ-lJ-naS" firstAttribute="leading" secondItem="PjT-TG-Oh9" secondAttribute="leading" constant="94" id="zCt-Mg-H0X"/>
                                         </constraints>
                                         <variation key="default">
@@ -317,72 +244,6 @@
             </objects>
             <point key="canvasLocation" x="1360" y="-707"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="CO2-sC-aJH">
-            <objects>
-                <viewController id="8HP-rK-N0R" customClass="GraphDataViewController" customModule="My_plant_and_me" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ulx-tb-VH0"/>
-                        <viewControllerLayoutGuide type="bottom" id="jl9-Us-bic"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Tso-6t-4v7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="[]" translatesAutoresizingMaskIntoConstraints="NO" id="Lgh-68-dUf">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kJ-ws-Cxb">
-                                <rect key="frame" x="278" y="285" width="44" height="30"/>
-                                <state key="normal" title="Action">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="performAction:" destination="8HP-rK-N0R" eventType="touchUpInside" id="l1k-ol-s2c"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humiditygraph" translatesAutoresizingMaskIntoConstraints="NO" id="Mxj-t4-a8o">
-                                <rect key="frame" x="16" y="28" width="568" height="249"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="2kJ-ws-Cxb" secondAttribute="centerX" id="1tn-C5-hQX"/>
-                            <constraint firstItem="2kJ-ws-Cxb" firstAttribute="top" secondItem="Mxj-t4-a8o" secondAttribute="bottom" constant="8" symbolic="YES" id="9lZ-4F-xZH"/>
-                            <constraint firstAttribute="centerY" secondItem="Lgh-68-dUf" secondAttribute="centerY" id="Hy3-LO-g4y"/>
-                            <constraint firstItem="Lgh-68-dUf" firstAttribute="leading" secondItem="Mxj-t4-a8o" secondAttribute="trailing" constant="-584" id="N1F-Uh-PCu"/>
-                            <constraint firstItem="Lgh-68-dUf" firstAttribute="top" secondItem="Tso-6t-4v7" secondAttribute="top" id="RP3-sG-Uz7"/>
-                            <constraint firstItem="Mxj-t4-a8o" firstAttribute="centerX" secondItem="2kJ-ws-Cxb" secondAttribute="centerX" id="RQc-rN-Kd5"/>
-                            <constraint firstItem="Mxj-t4-a8o" firstAttribute="leading" secondItem="Tso-6t-4v7" secondAttribute="leadingMargin" id="TSa-fp-kUN"/>
-                            <constraint firstItem="2kJ-ws-Cxb" firstAttribute="leading" secondItem="Tso-6t-4v7" secondAttribute="leading" constant="277" id="WKZ-mA-i0K"/>
-                            <constraint firstAttribute="trailing" secondItem="Lgh-68-dUf" secondAttribute="trailing" id="dZy-mf-uoD"/>
-                            <constraint firstAttribute="centerX" secondItem="Lgh-68-dUf" secondAttribute="centerX" id="guc-vn-Srk"/>
-                            <constraint firstItem="Lgh-68-dUf" firstAttribute="bottom" secondItem="jl9-Us-bic" secondAttribute="top" id="isf-RD-OFM"/>
-                            <constraint firstItem="2kJ-ws-Cxb" firstAttribute="centerY" secondItem="Lgh-68-dUf" secondAttribute="centerY" id="ssD-M0-sRc"/>
-                            <constraint firstAttribute="centerY" secondItem="2kJ-ws-Cxb" secondAttribute="centerY" id="t87-iJ-WOK"/>
-                            <constraint firstItem="Lgh-68-dUf" firstAttribute="leading" secondItem="Tso-6t-4v7" secondAttribute="leading" id="uIf-nT-ckj"/>
-                            <constraint firstItem="Mxj-t4-a8o" firstAttribute="top" secondItem="Ulx-tb-VH0" secondAttribute="bottom" constant="8" symbolic="YES" id="wVx-tE-ewC"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="WKZ-mA-i0K"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="R3K-om-pp2"/>
-                    <connections>
-                        <outlet property="actionButton" destination="2kJ-ws-Cxb" id="6d0-Ev-iFB"/>
-                        <outlet property="graph" destination="Mxj-t4-a8o" id="udS-lf-UT0"/>
-                        <outlet property="historyValues" destination="Lgh-68-dUf" id="8DQ-vu-A7b"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bd7-vM-oQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2613" y="320"/>
-        </scene>
     </scenes>
     <resources>
         <image name="humiditygraph" width="2656" height="1306"/>
@@ -392,7 +253,4 @@
         <image name="sunny18" width="32" height="32"/>
         <image name="thermometer50" width="32" height="32"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Of5-ol-9zq"/>
-    </inferredMetricsTieBreakers>
 </document>

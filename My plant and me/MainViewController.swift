@@ -11,9 +11,9 @@ import UIKit
 class MainViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
     let model = PlantModel(serverURL: "http://46.101.171.226:3000");
-    let defaultWaterQuantity = 10;
-    let defaultLightExposureTime: Int = 3;
-    let defaultTemperatureExposureTime: Int = 10;
+    let defaultWaterQuantity = 1;
+    let defaultLightExposureTime: Int = 5;
+    let defaultTemperatureExposureTime: Int = 1;
     
     func WaterPlant(sender: UIButton) {
         model.waterPlant(defaultWaterQuantity)
@@ -24,17 +24,31 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }
     
     func changeLights(sender: UIButton) {
-        model.setLights(minutes: 60)
+        model.setLights(minutes: defaultLightExposureTime)
     }
     
     @IBAction func turnMeOn(sender: UIButton) {
         changeLights(sender)
+        sender.enabled = false
+        delay(10) {
+            sender.enabled = true
+        }
     }
+    
     @IBAction func turnFans(sender: UIButton) {
         increaseTemperature(sender)
     }
     @IBAction func waterPlant(sender: UIButton) {
         WaterPlant(sender)
+    }
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
     }
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {

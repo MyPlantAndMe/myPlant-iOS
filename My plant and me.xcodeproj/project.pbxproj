@@ -638,6 +638,7 @@
 				954002E71AE28A6900AB8D69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		954002E81AE28A6900AB8D69 /* Build configuration list for PBXNativeTarget "My plant and meTests" */ = {
 			isa = XCConfigurationList;
@@ -646,6 +647,7 @@
 				954002EA1AE28A6900AB8D69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
